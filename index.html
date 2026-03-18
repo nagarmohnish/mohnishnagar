@@ -7,34 +7,39 @@
   <meta name="description" content="Startup operator at the intersection of AI, data, and digital media.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Loader — thin line across viewport -->
+  <!-- Loader -->
   <div class="loader" id="loader">
-    <div class="loader-line" id="loaderLine"></div>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    <span class="loader-text mono">MN</span>
   </div>
 
-  <!-- Noise / grain overlay -->
+  <!-- Noise overlay -->
   <div class="noise" aria-hidden="true"></div>
 
-  <!-- Cursor glow -->
-  <div class="cursor-glow" id="cursorGlow"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- Scroll progress — thin accent line at top -->
+  <!-- Scroll progress -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Navigation — barely there -->
+  <!-- Cursor -->
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
   <nav class="nav" id="nav">
-    <a href="#top" class="nav-mark">MN</a>
+    <a href="#top" class="nav-logo">
+      <span class="nav-logo-text">MN</span>
+      <span class="nav-logo-dot"></span>
+    </a>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Say hello</a>
+      <a href="#about" data-nav>About</a>
+      <a href="#work" data-nav>Experience</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#contact" data-nav>Contact</a>
     </div>
+    <a href="mailto:mohnish238@gmail.com" class="nav-cta">Get in touch</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span>
     </button>
@@ -43,260 +48,539 @@
   <!-- Mobile overlay -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Say hello</a>
+    <a href="#work">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
 
-  <!-- ============================
-       HERO — name as architecture
-       ============================ -->
+
+  <!-- ========================
+       HERO — Bold, unconventional
+       ======================== -->
   <section class="hero" id="top">
-    <div class="hero-ambient">
-      <div class="hero-blob hero-blob--1"></div>
-      <div class="hero-blob hero-blob--2"></div>
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
     </div>
 
     <div class="hero-content">
-      <p class="hero-tag" data-reveal>
-        <span class="mono">Startup Operator</span>
-        <span class="hero-tag-sep">/</span>
-        <span class="mono">AI + Data + Media</span>
-      </p>
-
-      <h1 class="hero-name" id="heroName" aria-label="Mohnish Nagar">
-        <span class="hero-name-line" data-chars>MOHNISH</span>
-        <span class="hero-name-line hero-name-line--outline" data-chars>NAGAR</span>
-      </h1>
-
-      <p class="hero-sub" data-reveal>
-        Driving growth at the intersection of AI, data, and digital media —
-        scaling revenue for U.S.-based publishing portfolios, building ML pipelines,
-        and leading cross-functional teams.
-      </p>
-
-      <div class="hero-meta" data-reveal>
-        <span class="mono hero-location">12.9716°N 77.5946°E — Bangalore</span>
-        <span class="hero-status">
-          <span class="status-dot"></span>
-          Open to opportunities
-        </span>
+      <div class="hero-badge" data-reveal>
+        <span class="status-dot"></span>
+        <span class="mono">Available for opportunities</span>
       </div>
-    </div>
 
-    <div class="hero-scroll">
-      <span class="mono">Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
+      <p class="hero-name-intro mono" data-reveal>Hi, I'm</p>
+      <h1 class="hero-name" data-fade-up>Mohnish Nagar</h1>
 
-
-  <!-- ============================
-       ABOUT — asymmetric, breathing
-       ============================ -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <span class="section-index mono" data-reveal>01</span>
-
-      <h2 class="about-heading" data-reveal>
-        I build at the<br>
-        <em>edge</em> of what's<br>
-        possible.
+      <h2 class="hero-title" data-fade-up>
+        <span class="hero-title-line">I build systems</span>
+        <span class="hero-title-line">that turn <em>data</em></span>
+        <span class="hero-title-line">into <em>growth</em>.</span>
       </h2>
 
-      <div class="about-body" data-reveal>
-        <p>
-          I'm a startup operator who thrives in founder-adjacent roles —
-          the kind that demand you think strategically at 10AM and ship code by 3PM.
-          I've scaled newsletters to 20,000+ subscribers in under two months,
-          deployed graph neural networks for social media analysis,
-          and built revenue engines across 30+ site publishing portfolios.
-        </p>
-        <p>
-          My work sits at the intersection of AI, growth, and digital media.
-          I don't just analyze data — I build the systems that make decisions from it.
-        </p>
+      <p class="hero-sub" data-reveal>
+        Startup operator at the intersection of AI, data, and digital media.
+        Scaling revenue, shipping ML pipelines, leading cross-functional teams.
+      </p>
+
+      <div class="hero-actions" data-reveal>
+        <a href="#work" class="btn btn--primary">View my work</a>
+        <a href="Mohnish_Nagar_CV_New.pdf" download class="btn btn--primary">Download Resume</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
       </div>
 
-      <div class="about-facts">
-        <div class="fact" data-reveal>
-          <span class="fact-value">IIT Kanpur</span>
-          <span class="fact-label mono">B.Sc. + MBA Minor</span>
+      <div class="hero-socials" data-reveal>
+        <a href="https://www.linkedin.com/in/mohnish-nagar/" target="_blank" rel="noopener" class="hero-social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span class="mono">LinkedIn</span>
+        </a>
+        <a href="https://github.com/nagarmohnish" target="_blank" rel="noopener" class="hero-social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <span class="mono">GitHub</span>
+        </a>
+      </div>
+
+      <!-- Bento stats row -->
+      <div class="hero-stats" data-reveal>
+        <div class="hero-stat">
+          <span class="hero-stat-num">20K+</span>
+          <span class="hero-stat-label mono">Newsletter subs in 2mo</span>
         </div>
-        <div class="fact" data-reveal>
-          <span class="fact-value">3+ years</span>
-          <span class="fact-label mono">Building & shipping</span>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">500+</span>
+          <span class="hero-stat-label mono">Startups evaluated</span>
         </div>
-        <div class="fact" data-reveal>
-          <span class="fact-value">20K+</span>
-          <span class="fact-label mono">Newsletter subscribers in &lt;2 months</span>
-        </div>
-        <div class="fact" data-reveal>
-          <span class="fact-value">500+</span>
-          <span class="fact-label mono">Startups evaluated</span>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3+</span>
+          <span class="hero-stat-label mono">Years building</span>
         </div>
       </div>
     </div>
 
-    <!-- Floating skills — scattered, not gridded -->
-    <div class="about-skills" data-reveal>
-      <span class="skill-float" style="--x: 5%; --y: 0%;">Python</span>
-      <span class="skill-float" style="--x: 22%; --y: 12%;">LLMs</span>
-      <span class="skill-float" style="--x: 48%; --y: 3%;">NLP</span>
-      <span class="skill-float" style="--x: 70%; --y: 15%;">Neo4j</span>
-      <span class="skill-float" style="--x: 88%; --y: 5%;">GNNs</span>
-      <span class="skill-float" style="--x: 10%; --y: 55%;">LangChain</span>
-      <span class="skill-float" style="--x: 35%; --y: 48%;">HuggingFace</span>
-      <span class="skill-float" style="--x: 58%; --y: 58%;">PostgreSQL</span>
-      <span class="skill-float" style="--x: 78%; --y: 45%;">SEO</span>
-      <span class="skill-float" style="--x: 5%; --y: 85%;">AdOps</span>
-      <span class="skill-float" style="--x: 28%; --y: 78%;">GA4</span>
-      <span class="skill-float" style="--x: 50%; --y: 90%;">A/B Testing</span>
-      <span class="skill-float" style="--x: 72%; --y: 82%;">Elasticsearch</span>
-      <span class="skill-float" style="--x: 90%; --y: 72%;">Transformers</span>
+    <div class="hero-scroll-hint" data-reveal>
+      <div class="hero-scroll-line"></div>
+      <span class="mono">Scroll to explore</span>
     </div>
   </section>
 
 
-  <!-- ============================
-       WORK — immersive, one at a time
-       ============================ -->
-  <section class="work" id="work">
-    <span class="section-index mono" data-reveal>02</span>
+  <!-- ========================
+       ABOUT — Bento grid
+       ======================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label mono">01 / About</span>
+        <h2 class="section-title">Know me better.</h2>
+      </div>
 
-    <!-- Role 1 — LH2 -->
-    <article class="role" data-color="warm">
-      <div class="role-content">
-        <span class="role-eyebrow mono" data-reveal>Jul 2025 — Present / Bangalore</span>
-        <h3 class="role-title" data-reveal>
-          <span data-chars>Founder's Office</span>
-        </h3>
-        <p class="role-org" data-reveal>LH2 Holdings</p>
-
-        <div class="role-description" data-reveal>
-          <p>Led growth and revenue strategy for U.S.-based publishing websites — aligning AdOps, SEO, content, and tech across cross-functional teams. Owned full-funnel performance, built AI-powered automation systems, and acted as the single point of contact for partner founders.</p>
+      <div class="bento-grid bento-about">
+        <!-- Main bio card -->
+        <div class="bento-card bento-card--lg" data-reveal>
+          <div class="bento-card-content">
+            <p class="bento-text-lg">
+              I'm a startup operator who thrives in founder-adjacent roles --
+              the kind that demand you think strategically at 10AM and ship code by 3PM.
+            </p>
+            <p class="bento-text">
+              I've scaled newsletters to 20,000+ subscribers in under two months,
+              deployed graph neural networks for social media analysis,
+              and built revenue engines across 30+ site publishing portfolios.
+              I don't just analyze data -- I build the systems that make decisions from it.
+            </p>
+          </div>
         </div>
 
-        <div class="role-feature" data-reveal>
-          <span class="role-feature-label mono">Featured project</span>
-          <h4>Inquisitr Newsletter Launch</h4>
-          <p>Took the daily newsletter from zero to 20,000+ subscribers in under 2 months. Built a zero-ESP-cost monetization model projected at ~$19.6K in 12-month revenue with 71%+ net margins. Designed an interactive P&L scenario engine for portfolio-wide scale-up across 30+ sites.</p>
+        <!-- Education card -->
+        <div class="bento-card" data-reveal>
+          <span class="bento-card-label mono">Education</span>
+          <span class="bento-card-value">IIT Kanpur</span>
+          <span class="bento-card-sub">B.Sc. + MBA Minor</span>
+        </div>
 
-          <div class="role-metrics">
-            <div class="metric-item">
-              <span class="metric-number">20K+</span>
-              <span class="metric-desc mono">Subscribers</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-number">$19.6K</span>
-              <span class="metric-desc mono">Projected 12mo rev</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-number">71%+</span>
-              <span class="metric-desc mono">Net margins</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-number">25–31%</span>
-              <span class="metric-desc mono">Open rates</span>
+        <!-- Location card -->
+        <div class="bento-card" data-reveal>
+          <span class="bento-card-label mono">Based in</span>
+          <span class="bento-card-value">Bangalore</span>
+          <span class="bento-card-sub">India</span>
+        </div>
+
+        <!-- Skills visual card -->
+        <div class="bento-card bento-card--wide" data-reveal>
+          <span class="bento-card-label mono">Tech Stack</span>
+          <div class="skills-visual">
+            <div class="skill-bar-group">
+              <div class="skill-bar-row">
+                <span class="skill-bar-name">Python</span>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--fill: 95%"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span class="skill-bar-name">LLMs / NLP</span>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--fill: 90%"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span class="skill-bar-name">Neo4j / GNNs</span>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--fill: 80%"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span class="skill-bar-name">PostgreSQL</span>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--fill: 85%"></div></div>
+              </div>
+              <div class="skill-bar-row">
+                <span class="skill-bar-name">SEO / AdOps</span>
+                <div class="skill-bar"><div class="skill-bar-fill" style="--fill: 88%"></div></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="role-tools mono" data-reveal>
-          Python / LLMs / GA4 / GSC / AdOps / Jira / WordPress
+        <!-- Tools cloud card -->
+        <div class="bento-card bento-card--wide" data-reveal>
+          <span class="bento-card-label mono">Full Toolkit</span>
+          <div class="skills-cloud">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">LLMs</span>
+            <span class="skill-chip">NLP</span>
+            <span class="skill-chip">Neo4j</span>
+            <span class="skill-chip">GNNs</span>
+            <span class="skill-chip">LangChain</span>
+            <span class="skill-chip">HuggingFace</span>
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">Elasticsearch</span>
+            <span class="skill-chip">Transformers</span>
+            <span class="skill-chip">SEO</span>
+            <span class="skill-chip">AdOps</span>
+            <span class="skill-chip">GA4</span>
+            <span class="skill-chip">A/B Testing</span>
+            <span class="skill-chip">WordPress</span>
+            <span class="skill-chip">Jira</span>
+          </div>
         </div>
       </div>
-    </article>
-
-    <!-- Role 2 — Opinium -->
-    <article class="role" data-color="cool">
-      <div class="role-content">
-        <span class="role-eyebrow mono" data-reveal>Jul 2024 — Apr 2025 / Delhi</span>
-        <h3 class="role-title" data-reveal>
-          <span data-chars>Data Analyst</span>
-        </h3>
-        <p class="role-org" data-reveal>Opinium.ai — Founding Member</p>
-
-        <div class="role-description" data-reveal>
-          <p>Shaped AI product strategy from the ground up. Established a Data Science team of 5, built end-to-end ML pipelines, and deployed NLP models for sentiment analysis, engagement tracking, and topic identification. Designed graph-based models using Neo4j and GNNs for social media pattern detection.</p>
-        </div>
-
-        <div class="role-tools mono" data-reveal>
-          Python / NLP / LLMs / HuggingFace / LangChain / Neo4j / PostgreSQL / Elasticsearch
-        </div>
-      </div>
-    </article>
-
-    <!-- Role 3 — PedalStart -->
-    <article class="role" data-color="neutral">
-      <div class="role-content">
-        <span class="role-eyebrow mono" data-reveal>Aug 2023 — Jun 2024 / Gurugram</span>
-        <h3 class="role-title" data-reveal>
-          <span data-chars>Startup Analyst</span>
-        </h3>
-        <p class="role-org" data-reveal>PedalStart — Startup Accelerator</p>
-
-        <div class="role-description" data-reveal>
-          <p>Led a team of 4 to build a startup evaluation process — screened 500+ applications, onboarded 50. Managed a community of 200+ startups, refined GTM and investor pitches (15%+ secured funding), and coordinated large-scale networking events across Bangalore and Delhi NCR.</p>
-        </div>
-
-        <div class="role-tools mono" data-reveal>
-          Python / Excel / PowerPoint / Canva
-        </div>
-      </div>
-    </article>
-
-    <!-- Role 4 — Cyntra -->
-    <article class="role" data-color="neutral">
-      <div class="role-content">
-        <span class="role-eyebrow mono" data-reveal>Apr 2023 — Jul 2023 / Noida</span>
-        <h3 class="role-title" data-reveal>
-          <span data-chars>Investor Relations</span>
-        </h3>
-        <p class="role-org" data-reveal>Cyntra — IT Solutions</p>
-
-        <div class="role-description" data-reveal>
-          <p>Market research on investment trends, pitch deck development, and financial modeling. Identified high-potential investors and coordinated industry events that led to strategic partnerships for Cyntra's tech integration solutions.</p>
-        </div>
-
-        <div class="role-tools mono" data-reveal>
-          Python / Excel / Google Sheets
-        </div>
-      </div>
-    </article>
+    </div>
   </section>
 
 
-  <!-- ============================
-       CONTACT — dissolves into nothing
-       ============================ -->
-  <section class="contact" id="contact">
-    <span class="section-index mono" data-reveal>03</span>
+  <!-- ========================
+       WORK — Interactive timeline
+       ======================== -->
+  <section class="section section--alt" id="work">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label mono">02 / Experience</span>
+        <h2 class="section-title">Where I've made impact.</h2>
+      </div>
 
-    <h2 class="contact-heading" data-reveal>
-      <span data-chars>Let's talk.</span>
-    </h2>
+      <div class="timeline">
+        <div class="timeline-track"></div>
 
-    <div class="contact-links" data-reveal>
-      <a href="mailto:mohnish238@gmail.com" class="contact-link">
-        <span class="mono contact-link-label">Email</span>
-        <span class="contact-link-value">mohnish238@gmail.com</span>
-      </a>
-      <a href="tel:+919555864171" class="contact-link">
-        <span class="mono contact-link-label">Phone</span>
-        <span class="contact-link-value">+91-9555864171</span>
-      </a>
-      <a href="https://linkedin.com/in/" class="contact-link" target="_blank" rel="noopener">
-        <span class="mono contact-link-label">LinkedIn</span>
-        <span class="contact-link-value">Connect</span>
-      </a>
-      <a href="https://github.com/" class="contact-link" target="_blank" rel="noopener">
-        <span class="mono contact-link-label">GitHub</span>
-        <span class="contact-link-value">Code</span>
-      </a>
+        <!-- Role 1 -->
+        <article class="tl-item tl-item--active" data-reveal-group>
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <span class="tl-date mono" data-reveal>2025 -- Present</span>
+          </div>
+          <div class="tl-card" data-reveal>
+            <div class="tl-card-header">
+              <div>
+                <h3 class="tl-role">Founder's Office</h3>
+                <p class="tl-org">LH2 Holdings <span class="tl-loc mono">Bangalore</span></p>
+              </div>
+              <span class="tl-badge mono">Current</span>
+            </div>
+            <p class="tl-desc">Led growth and revenue strategy for U.S.-based publishing websites -- aligning AdOps, SEO, content, and tech across cross-functional teams. Owned full-funnel performance, built AI-powered automation systems, and acted as the single point of contact for partner founders.</p>
+
+            <!-- Featured highlight -->
+            <div class="tl-highlight">
+              <div class="tl-highlight-header">
+                <span class="tl-highlight-icon">&#9670;</span>
+                <span class="mono">Key Achievement: Inquisitr Newsletter</span>
+              </div>
+              <p class="tl-highlight-desc">Zero to 20,000+ subscribers in under 2 months. Built a zero-ESP-cost monetization model projected at ~$19.6K/year at 71%+ net margins. Designed an interactive P&L engine for portfolio-wide scale-up across 30+ sites.</p>
+              <div class="tl-metrics">
+                <div class="tl-metric">
+                  <span class="tl-metric-num">20K+</span>
+                  <span class="tl-metric-label mono">Subscribers</span>
+                </div>
+                <div class="tl-metric">
+                  <span class="tl-metric-num">$19.6K</span>
+                  <span class="tl-metric-label mono">12mo Revenue</span>
+                </div>
+                <div class="tl-metric">
+                  <span class="tl-metric-num">71%+</span>
+                  <span class="tl-metric-label mono">Net Margins</span>
+                </div>
+                <div class="tl-metric">
+                  <span class="tl-metric-num">25-31%</span>
+                  <span class="tl-metric-label mono">Open Rates</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">LLMs</span>
+              <span class="tool-tag">GA4</span>
+              <span class="tool-tag">GSC</span>
+              <span class="tool-tag">AdOps</span>
+              <span class="tool-tag">Jira</span>
+              <span class="tool-tag">WordPress</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Role 2 -->
+        <article class="tl-item" data-reveal-group>
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <span class="tl-date mono" data-reveal>2024 -- 2025</span>
+          </div>
+          <div class="tl-card" data-reveal>
+            <div class="tl-card-header">
+              <div>
+                <h3 class="tl-role">Founding Member, Data</h3>
+                <p class="tl-org">Opinium.ai <span class="tl-loc mono">Delhi</span></p>
+              </div>
+            </div>
+            <p class="tl-desc">Shaped AI product strategy from the ground up. Established a Data Science team of 5, built end-to-end ML pipelines, and deployed NLP models for sentiment analysis, engagement tracking, and topic identification. Designed graph-based models using Neo4j and GNNs for social media pattern detection.</p>
+            <div class="tl-tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">NLP</span>
+              <span class="tool-tag">LLMs</span>
+              <span class="tool-tag">HuggingFace</span>
+              <span class="tool-tag">LangChain</span>
+              <span class="tool-tag">Neo4j</span>
+              <span class="tool-tag">PostgreSQL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Role 3 -->
+        <article class="tl-item" data-reveal-group>
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <span class="tl-date mono" data-reveal>2023 -- 2024</span>
+          </div>
+          <div class="tl-card" data-reveal>
+            <div class="tl-card-header">
+              <div>
+                <h3 class="tl-role">Startup Analyst</h3>
+                <p class="tl-org">PedalStart <span class="tl-loc mono">Gurugram</span></p>
+              </div>
+            </div>
+            <p class="tl-desc">Led a team of 4 to build a startup evaluation process -- screened 500+ applications, onboarded 50. Managed a community of 200+ startups, refined GTM and investor pitches (15%+ secured funding), and coordinated large-scale networking events.</p>
+            <div class="tl-tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Excel</span>
+              <span class="tool-tag">PowerPoint</span>
+              <span class="tool-tag">Canva</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Role 4 -->
+        <article class="tl-item" data-reveal-group>
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <span class="tl-date mono" data-reveal>2023</span>
+          </div>
+          <div class="tl-card" data-reveal>
+            <div class="tl-card-header">
+              <div>
+                <h3 class="tl-role">Investor Relations</h3>
+                <p class="tl-org">Cyntra <span class="tl-loc mono">Noida</span></p>
+              </div>
+            </div>
+            <p class="tl-desc">Market research on investment trends, pitch deck development, and financial modeling. Identified high-potential investors and coordinated industry events that led to strategic partnerships.</p>
+            <div class="tl-tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Excel</span>
+              <span class="tool-tag">Google Sheets</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="contact-fade">
-      <span class="mono" data-reveal>&copy; 2026 Mohnish Nagar</span>
+
+  <!-- ========================
+       PROJECTS — Card grid
+       ======================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label mono">03 / Projects</span>
+        <h2 class="section-title">Things I've built.</h2>
+      </div>
+
+      <!-- Featured projects — large cards -->
+      <div class="project-featured-grid">
+        <a href="https://github.com/nagarmohnish/convertinX" target="_blank" rel="noopener" class="project-card project-card--featured" data-reveal>
+          <div class="project-card-badge mono">Featured</div>
+          <h3 class="project-card-title">convertinX</h3>
+          <p class="project-card-desc">Universal content localization tool -- translate text, dub audio, and localize video with subtitles across 10+ languages using open-source ML models.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3178c6"></span>TypeScript</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/email-revenue-simulator" target="_blank" rel="noopener" class="project-card project-card--featured" data-reveal>
+          <div class="project-card-badge mono">Featured</div>
+          <h3 class="project-card-title">Email Revenue Simulator</h3>
+          <p class="project-card-desc">Fintech-grade simulator -- model newsletter economics, forecast breakeven, and validate email monetization strategies.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3178c6"></span>TypeScript</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Category tabs labels -->
+      <div class="project-category-row" data-reveal>
+        <span class="project-cat-label mono">All Projects</span>
+        <span class="project-cat-count mono">16 repos</span>
+      </div>
+
+      <!-- All projects grid -->
+      <div class="project-grid">
+        <a href="https://github.com/nagarmohnish/signal" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">SIGNAL</h3>
+          <p class="project-card-desc">AI & tech news platform with automated content pipeline.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3178c6"></span>TypeScript</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/agency" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Honey & Lemon</h3>
+          <p class="project-card-desc">Performance marketing agency -- full brand identity and web presence.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3178c6"></span>TypeScript</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/neo4j-setup" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Neo4j Graph Pipeline</h3>
+          <p class="project-card-desc">PostgreSQL to LLM to Neo4j -- automated knowledge graph generation.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/global-startups" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Global Startups</h3>
+          <p class="project-card-desc">Scraper for 6 cities -- 1,019 startups from Failory, F6S, and Seedtable.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/seo-analytics-pipeline" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">SEO Analytics Pipeline</h3>
+          <p class="project-card-desc">Automated pipeline with Airflow and PostgreSQL for keyword tracking.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/inquisitr_dashboard" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Inquisitr Dashboard</h3>
+          <p class="project-card-desc">Real-time newsletter analytics -- subscriber growth, open rates, revenue.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#f1e05a"></span>JavaScript</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/cbot-ollama" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">CBot Ollama</h3>
+          <p class="project-card-desc">Local chatbot with Ollama -- on-device LLM for private conversations.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/reelit" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">ReelIt</h3>
+          <p class="project-card-desc">AI-powered short-form video generation for social media content.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/persi" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Persi</h3>
+          <p class="project-card-desc">Personal AI assistant -- conversational interface with modern stack.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3178c6"></span>TypeScript</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/translator" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Translator</h3>
+          <p class="project-card-desc">Multi-language translation engine using open-source NLP models.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/miami-herald-scraper" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Miami Herald Scraper</h3>
+          <p class="project-card-desc">Article extraction via Google News RSS -- automated content monitoring.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/nagarmohnish/geo_analysis_tool" target="_blank" rel="noopener" class="project-card" data-reveal>
+          <h3 class="project-card-title">Geo Analysis Tool</h3>
+          <p class="project-card-desc">Spatial data analysis and location-based visualization toolkit.</p>
+          <div class="project-card-footer">
+            <span class="project-card-lang"><span class="lang-dot" style="--lc:#3572A5"></span>Python</span>
+            <span class="project-card-arrow">&nearr;</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-footer" data-reveal>
+        <a href="https://github.com/nagarmohnish" target="_blank" rel="noopener" class="btn btn--ghost">
+          View all on GitHub &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================
+       CONTACT
+       ======================== -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label mono">04 / Contact</span>
+        <h2 class="section-title">Let's build something.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-main" data-reveal>
+          <p class="contact-intro">I'm always interested in hearing about new opportunities, challenging problems, and ambitious projects. Let's talk.</p>
+          <a href="mailto:mohnish238@gmail.com" class="btn btn--primary btn--lg">
+            Send me an email &rarr;
+          </a>
+        </div>
+
+        <div class="contact-links" data-reveal>
+          <a href="mailto:mohnish238@gmail.com" class="contact-link">
+            <span class="contact-link-icon">&#9993;</span>
+            <div>
+              <span class="contact-link-label mono">Email</span>
+              <span class="contact-link-value">mohnish238@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+919555864171" class="contact-link">
+            <span class="contact-link-icon">&#9742;</span>
+            <div>
+              <span class="contact-link-label mono">Phone</span>
+              <span class="contact-link-value">+91-9555864171</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-icon">in</span>
+            <div>
+              <span class="contact-link-label mono">LinkedIn</span>
+              <span class="contact-link-value">Connect with me</span>
+            </div>
+          </a>
+          <a href="https://github.com/nagarmohnish" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link-icon">&lt;/&gt;</span>
+            <div>
+              <span class="contact-link-label mono">GitHub</span>
+              <span class="contact-link-value">View my code</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <span class="mono">&copy; 2026 Mohnish Nagar</span>
+          <span class="mono">Bangalore, India</span>
+        </div>
+      </footer>
     </div>
   </section>
 
