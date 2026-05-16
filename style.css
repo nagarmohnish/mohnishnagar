@@ -91,6 +91,51 @@ button { cursor: none; font-family: inherit; }
 }
 
 /* ============================================
+   DESIGN SWITCHER (bottom-right floating)
+   ============================================ */
+.design-switcher {
+  position: fixed;
+  bottom: 18px; right: 18px;
+  z-index: 9998;
+  display: flex; align-items: center; gap: 0.25rem;
+  padding: 0.35rem 0.4rem 0.35rem 0.75rem;
+  background: rgba(10, 10, 10, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.ds-label { color: var(--text-faint); margin-right: 0.35rem; }
+.ds-link {
+  padding: 0.3rem 0.65rem;
+  border-radius: 100px;
+  color: var(--text-muted);
+  transition: all 0.2s var(--ease-out);
+  white-space: nowrap;
+}
+.ds-link:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+}
+.ds-link--active {
+  color: var(--steel-light);
+  background: var(--steel-subtle);
+  border: 1px solid var(--border-steel);
+}
+@media (max-width: 720px) {
+  .design-switcher {
+    font-size: 0.52rem;
+    bottom: 10px; right: 10px; left: 10px;
+    justify-content: center;
+  }
+  .ds-label { display: none; }
+}
+
+/* ============================================
    LOADER
    ============================================ */
 .loader {
