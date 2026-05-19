@@ -65,7 +65,6 @@ body {
   color: var(--text);
   line-height: 1.65;
   overflow-x: hidden;
-  cursor: none;
 }
 
 ::selection {
@@ -73,8 +72,8 @@ body {
   color: var(--text);
 }
 
-a { color: inherit; text-decoration: none; cursor: none; }
-button { cursor: none; font-family: inherit; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
 
 .mono {
   font-family: var(--font-mono);
@@ -88,118 +87,6 @@ button { cursor: none; font-family: inherit; }
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-/* ============================================
-   DESIGN SWITCHER (bottom-right floating)
-   ============================================ */
-.design-switcher {
-  position: fixed;
-  bottom: 18px; right: 18px;
-  z-index: 9998;
-  display: flex; align-items: center; gap: 0.25rem;
-  padding: 0.35rem 0.4rem 0.35rem 0.75rem;
-  background: rgba(10, 10, 10, 0.78);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-}
-.ds-label { color: var(--text-faint); margin-right: 0.35rem; }
-.ds-link {
-  padding: 0.3rem 0.65rem;
-  border-radius: 100px;
-  color: var(--text-muted);
-  transition: all 0.2s var(--ease-out);
-  white-space: nowrap;
-}
-.ds-link:hover {
-  color: var(--text);
-  background: rgba(255,255,255,0.05);
-}
-.ds-link--active {
-  color: var(--steel-light);
-  background: var(--steel-subtle);
-  border: 1px solid var(--border-steel);
-}
-@media (max-width: 720px) {
-  .design-switcher {
-    font-size: 0.52rem;
-    bottom: 10px; right: 10px; left: 10px;
-    justify-content: center;
-  }
-  .ds-label { display: none; }
-}
-
-/* ============================================
-   LOADER
-   ============================================ */
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  background: var(--black);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  transition: opacity 0.6s var(--ease-smooth) 0.2s, visibility 0.6s;
-}
-.loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
-
-.loader-bar {
-  width: 200px;
-  height: 2px;
-  background: var(--surface);
-  border-radius: 2px;
-  overflow: hidden;
-}
-.loader-fill {
-  height: 100%;
-  width: 0;
-  background: var(--steel);
-  border-radius: 2px;
-  transition: width 0.3s var(--ease-out);
-}
-.loader-text { color: var(--steel); font-size: 0.8rem; letter-spacing: 0.3em; }
-
-/* ============================================
-   NOISE
-   ============================================ */
-.noise {
-  position: fixed; inset: 0; z-index: 9999;
-  pointer-events: none; opacity: 0.02;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat; background-size: 256px;
-}
-
-/* ============================================
-   CURSOR
-   ============================================ */
-.cursor-ring {
-  position: fixed;
-  width: 32px; height: 32px;
-  border: 1.5px solid var(--steel);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10001;
-  transform: translate(-50%, -50%);
-  transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out),
-              border-color 0.2s, opacity 0.3s, background 0.2s;
-  opacity: 0;
-  will-change: left, top;
-  mix-blend-mode: difference;
-}
-.cursor-ring.visible { opacity: 1; }
-.cursor-ring.hovering {
-  width: 56px; height: 56px;
-  background: rgba(70, 130, 180, 0.1);
-  border-color: var(--steel-light);
 }
 
 /* ============================================
@@ -358,7 +245,7 @@ button { cursor: none; font-family: inherit; }
    SECTIONS
    ============================================ */
 .section {
-  padding: 56px 0;
+  padding: 5.5rem 0;
   position: relative;
 }
 .section--alt {
@@ -366,7 +253,7 @@ button { cursor: none; font-family: inherit; }
 }
 
 .section-header {
-  margin-bottom: 2rem;
+  margin-bottom: 2.75rem;
 }
 .section-label {
   color: var(--steel);
@@ -385,7 +272,7 @@ button { cursor: none; font-family: inherit; }
    ============================================ */
 .hero {
   position: relative;
-  padding: 6.5rem 2rem 2.5rem;
+  padding: 7rem 2rem 4rem;
   overflow: hidden;
 }
 
@@ -399,16 +286,6 @@ button { cursor: none; font-family: inherit; }
     radial-gradient(ellipse 80% 60% at 70% 20%, rgba(70, 130, 180, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse 50% 40% at 20% 80%, rgba(44, 95, 138, 0.06) 0%, transparent 50%);
 }
-.hero-grid-lines {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent);
-}
-
 .hero-content {
   position: relative; z-index: 1;
   max-width: var(--container);
@@ -634,15 +511,12 @@ details[open] > summary .chevron { transform: rotate(-135deg); top: 2px; }
   letter-spacing: 0.15em;
 }
 .hero-name {
-  font-size: clamp(2.75rem, 6.5vw, 5rem);
+  font-size: clamp(2.75rem, 6.5vw, 4.6rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--text) 0%, var(--light-steel) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text);
 }
 
 .status-dot {
@@ -736,9 +610,6 @@ details[open] > summary .chevron { transform: rotate(-135deg); top: 2px; }
   border-color: var(--steel);
   background: var(--steel-subtle);
 }
-
-/* (scroll hint removed for cleaner hero) */
-@keyframes scrollDrip { 0% { top: -100%; } 100% { top: 200%; } }
 
 /* ============================================
    BENTO GRID — About section
@@ -1261,9 +1132,6 @@ details[open] > summary .chevron { transform: rotate(-135deg); top: 2px; }
 }
 
 @media (max-width: 768px) {
-  body { cursor: auto; }
-  .cursor-ring { display: none !important; }
-
   .nav { padding: 0.75rem 1.25rem; }
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: block; }
