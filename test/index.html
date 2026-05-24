@@ -3,281 +3,317 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohnish Nagar — Deep Space Concept</title>
-  <meta name="description" content="Design test: cosmic / deep-space aesthetic for Mohnish Nagar's portfolio.">
+  <title>Mohnish Nagar — Monochrome Concept</title>
+  <meta name="description" content="Design test: monochrome / atomic-inspired aesthetic for Mohnish Nagar's portfolio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Cosmic background layers -->
-  <div class="cosmos" aria-hidden="true">
-    <div class="cosmos-nebula cosmos-nebula--purple"></div>
-    <div class="cosmos-nebula cosmos-nebula--cyan"></div>
-    <div class="cosmos-nebula cosmos-nebula--amber"></div>
-    <div class="cosmos-stars cosmos-stars--small"></div>
-    <div class="cosmos-stars cosmos-stars--med"></div>
-    <div class="cosmos-vignette"></div>
-  </div>
+  <!-- Decorative rotating circles -->
+  <svg class="atom-circle atom-circle--lg" viewBox="0 0 200 200" aria-hidden="true">
+    <defs>
+      <pattern id="dots" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+        <circle cx="3" cy="3" r="0.6" fill="rgba(255,255,255,0.35)"/>
+      </pattern>
+    </defs>
+    <circle cx="100" cy="100" r="98" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="2 8"/>
+    <circle cx="100" cy="100" r="60" fill="url(#dots)"/>
+  </svg>
 
-  <!-- Test mode ribbon -->
+  <svg class="atom-circle atom-circle--sm" viewBox="0 0 120 120" aria-hidden="true">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="1 4"/>
+    <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <circle cx="60" cy="60" r="2" fill="rgba(255,255,255,0.5)"/>
+  </svg>
+
+  <!-- Test ribbon -->
   <div class="test-ribbon">
-    <span class="mono">Design Test &middot; Deep Space</span>
+    <span class="mono">Design Test &middot; Monochrome</span>
     <a href="../" class="mono">&larr; Back to main</a>
   </div>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <header class="nav">
     <a href="#top" class="nav-logo">
       <span class="nav-logo-mark">MN</span>
-      <span class="nav-logo-dot"></span>
+      <span class="nav-logo-trade">&copy;</span>
     </a>
-    <div class="nav-links">
+    <nav class="nav-links" aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#work">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
       <a href="#contact">Contact</a>
-    </div>
-    <a href="mailto:mohnish238@gmail.com" class="nav-cta">Get in touch</a>
-  </nav>
+    </nav>
+    <a href="mailto:mohnish238@gmail.com" class="nav-cta">
+      <span>Get in touch</span>
+      <span class="nav-cta-arrow">&rarr;</span>
+    </a>
+  </header>
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="container hero-inner">
-      <div class="hero-left">
-        <div class="hero-badge">
-          <span class="orbit-dot"></span>
-          <span class="mono">Available for opportunities</span>
+    <div class="container">
+      <div class="hero-top">
+        <span class="hero-availability">
+          <span class="avail-dot"></span>
+          <span class="mono">Available for opportunities &middot; 2026</span>
+        </span>
+        <span class="hero-counter mono">
+          <span class="hero-counter-num">35</span>
+          <span class="hero-counter-sym">+</span>
+          <span class="hero-counter-label">Content properties</span>
+        </span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-line">Growth &amp;</span>
+        <span class="hero-title-line"><span class="hero-script">monetization</span>,</span>
+        <span class="hero-title-line">shipped 0 &rarr; 1.</span>
+      </h1>
+
+      <div class="hero-meta">
+        <div class="hero-meta-block">
+          <span class="meta-label mono">Now</span>
+          <p class="meta-text">
+            Founder's Office at <strong>LH2 Holdings</strong> &mdash; driving 0&rarr;1
+            monetization across 35+ U.S. content properties.
+          </p>
         </div>
-
-        <p class="hero-intro mono">Hi, I'm</p>
-        <h1 class="hero-name">
-          <span class="hero-name-text">Mohnish Nagar</span>
-        </h1>
-
-        <h2 class="hero-title">
-          Growth &amp; monetization,<br>
-          shipped <em>0 &rarr; 1</em>.
-        </h2>
-
-        <p class="hero-sub">
-          Growth and monetization operator across digital publishing, AI/ML data
-          products, and the early-stage startup ecosystem. Currently in the Founder's
-          Office at LH2 Holdings, driving 0&rarr;1 monetization across 35+ U.S.
-          content properties.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#work" class="btn btn--primary">
-            <span>Explore the work</span>
-            <span class="btn-arrow">&rarr;</span>
-          </a>
-          <a href="../Mohnish_Nagar_CV_2.pdf" download class="btn btn--ghost">Download CV</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-num">35+</span>
-            <span class="hero-stat-label mono">Content properties</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">20K+</span>
-            <span class="hero-stat-label mono">Newsletter subs / 3mo</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">10%+</span>
-            <span class="hero-stat-label mono">Revenue uplift</span>
-          </div>
+        <div class="hero-meta-block">
+          <span class="meta-label mono">Focus</span>
+          <p class="meta-text">
+            Subscriptions, payments, GA4 instrumentation, newsletter growth, and
+            funnel optimization &mdash; hands-on, end-to-end.
+          </p>
         </div>
       </div>
 
-      <!-- Orbit / snapshot card on the right -->
-      <aside class="snapshot">
-        <div class="snapshot-glow" aria-hidden="true"></div>
-        <header class="snapshot-head">
-          <span class="snapshot-eyebrow mono">Snapshot</span>
-          <span class="snapshot-time mono">2026</span>
-        </header>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn--solid">
+          <span>See the work</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+        <a href="../Mohnish_Nagar_CV_2.pdf" download class="btn btn--ghost">
+          <span>Download CV</span>
+          <span class="btn-icon">&darr;</span>
+        </a>
+      </div>
+    </div>
 
-        <div class="snapshot-row">
-          <span class="snapshot-key mono">Role</span>
-          <div class="snapshot-val">
-            <span class="snapshot-strong">Founder's Office</span>
-            <span class="snapshot-faint">LH2 Holdings &middot; Bangalore</span>
-          </div>
-        </div>
-
-        <div class="snapshot-row">
-          <span class="snapshot-key mono">Building</span>
-          <ul class="snapshot-list">
-            <li>"Go Ad-Free" subscription on Shark Tank Blog</li>
-            <li>GA4 + Stripe webhook conversion funnels</li>
-            <li>Newsletter monetization workflows</li>
-          </ul>
-        </div>
-
-        <div class="snapshot-row">
-          <span class="snapshot-key mono">Stack</span>
-          <div class="snapshot-chips">
-            <span class="chip">Stripe</span>
-            <span class="chip">GA4</span>
-            <span class="chip">FastAPI</span>
-            <span class="chip">Apps Script</span>
-            <span class="chip">WordPress</span>
-            <span class="chip">Claude Code</span>
-          </div>
-        </div>
-
-        <footer class="snapshot-feature">
-          <div class="snapshot-feature-head">
-            <span class="snapshot-key mono">Recent launch</span>
-            <span class="snapshot-feature-tag mono">Shark Tank Blog</span>
-          </div>
-          <p class="snapshot-feature-body">
-            Launched <strong>"Go Ad-Free" subscription</strong> ($1-2/mo) with
-            Stripe-first checkout, <strong>SSO / Google One Tap</strong> login,
-            ad-suppression logic, and a custom WordPress membership plugin.
-          </p>
-        </footer>
-      </aside>
+    <!-- Marquee strip -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Inquisitr</span><span class="marquee-sep">&bull;</span>
+        <span>AllMusic</span><span class="marquee-sep">&bull;</span>
+        <span>Shark Tank Blog</span><span class="marquee-sep">&bull;</span>
+        <span>Vintage Aviation News</span><span class="marquee-sep">&bull;</span>
+        <span>F4WOnline</span><span class="marquee-sep">&bull;</span>
+        <span>Opinium.ai</span><span class="marquee-sep">&bull;</span>
+        <span>PedalStart</span><span class="marquee-sep">&bull;</span>
+        <span>Inquisitr</span><span class="marquee-sep">&bull;</span>
+        <span>AllMusic</span><span class="marquee-sep">&bull;</span>
+        <span>Shark Tank Blog</span><span class="marquee-sep">&bull;</span>
+        <span>Vintage Aviation News</span><span class="marquee-sep">&bull;</span>
+        <span>F4WOnline</span><span class="marquee-sep">&bull;</span>
+        <span>Opinium.ai</span><span class="marquee-sep">&bull;</span>
+        <span>PedalStart</span><span class="marquee-sep">&bull;</span>
+      </div>
     </div>
   </section>
 
-  <!-- ABOUT / WHY -->
+  <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
       <header class="section-head">
-        <span class="section-eyebrow mono">01 / About</span>
-        <h2 class="section-title">Operator across <em>publishing</em>, <em>AI</em>, and <em>early-stage</em>.</h2>
+        <span class="section-eyebrow mono">01 — About</span>
+        <h2 class="section-title">
+          Operator across <em>publishing</em>,<br>
+          <em>AI products</em>, and the<br>
+          <em>early-stage</em> ecosystem.
+        </h2>
       </header>
 
       <div class="about-grid">
         <article class="card card--bio">
+          <span class="card-label mono">Bio</span>
           <p class="card-lead">
-            Hands-on across subscription systems, payments, GA4 instrumentation,
-            newsletter growth, and funnel optimization. Previously the first employee
-            at <strong>Opinium.ai</strong> (~40L pre-seed) where I built an NLP/LLM
-            social intelligence product 0&rarr;1, and assessed 500+ startups at PedalStart.
+            Growth and monetization operator currently in the Founder's Office at LH2 Holdings.
+            Previously the first employee at <strong>Opinium.ai</strong> (~40L pre-seed) where I
+            shipped an NLP / LLM social-intelligence product 0&rarr;1, and assessed 500+
+            startups at PedalStart before that.
           </p>
+          <div class="card-foot">
+            <span class="card-foot-key mono">Hands-on across</span>
+            <span class="card-foot-val">Subscriptions, payments, GA4, newsletters, funnels.</span>
+          </div>
         </article>
 
         <article class="card card--meta">
           <span class="card-label mono">Education</span>
           <span class="card-value">IIT Kanpur</span>
-          <span class="card-faint">B.Sc. Earth Sciences + MBA Minor</span>
+          <span class="card-faint">B.Sc. Earth Sciences<br>Minor: MBA, Industrial &amp; Mgmt. Eng.</span>
         </article>
 
         <article class="card card--meta">
-          <span class="card-label mono">Based in</span>
+          <span class="card-label mono">Based</span>
           <span class="card-value">Bangalore</span>
-          <span class="card-faint">India &middot; Open to remote</span>
-        </article>
-
-        <article class="card card--skills">
-          <span class="card-label mono">Growth &amp; Monetization</span>
-          <div class="chips chips--primary">
-            <span class="chip chip--primary">Subscription Systems</span>
-            <span class="chip chip--primary">Funnel Optimization</span>
-            <span class="chip chip--primary">Newsletter Growth</span>
-            <span class="chip chip--primary">Payments Integration</span>
-            <span class="chip chip--primary">CRO</span>
-            <span class="chip chip--primary">Pricing Strategy</span>
-          </div>
-        </article>
-
-        <article class="card card--skills">
-          <span class="card-label mono">Programming &amp; Data</span>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">FastAPI</span>
-            <span class="chip">SQL</span>
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">Neo4j</span>
-            <span class="chip">NLP / LLMs</span>
-            <span class="chip">LangChain</span>
-            <span class="chip">Apps Script</span>
-          </div>
+          <span class="card-faint">India<br>Open to remote &amp; hybrid</span>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- WORK -->
+  <!-- WORK / HEADLINE LAUNCH -->
   <section class="section" id="work">
     <div class="container">
       <header class="section-head">
-        <span class="section-eyebrow mono">02 / Headline launch</span>
-        <h2 class="section-title">"Go Ad-Free" on <em>Shark Tank Blog</em>.</h2>
+        <span class="section-eyebrow mono">02 — Headline launch</span>
+        <h2 class="section-title">
+          "Go Ad-Free" on<br>
+          <em>Shark Tank Blog</em>.
+        </h2>
       </header>
 
-      <article class="launch-card">
-        <div class="launch-card-glow" aria-hidden="true"></div>
-        <div class="launch-grid">
-          <div class="launch-meta">
-            <span class="launch-eyebrow mono">Subscription &middot; $1-2/mo</span>
-            <h3 class="launch-title">End-to-end membership system</h3>
-            <p class="launch-body">
-              Designed and shipped the "Go Ad-Free" subscription end-to-end &mdash;
-              Stripe-first checkout, SSO / Google One Tap login, ad-suppression logic,
-              and a custom WordPress membership plugin. Instrumented GA4 conversion
-              funnels and Stripe webhook tracking across 4 publishing assets, lifting
-              unit-economics visibility and contributing to a <strong>10%+ revenue
-              uplift</strong> through pricing experiments, CTA placement tests, and
-              audience segmentation.
-            </p>
-            <div class="launch-tools">
-              <span class="tool">Stripe</span>
-              <span class="tool">Google One Tap</span>
-              <span class="tool">WordPress Plugin</span>
-              <span class="tool">GA4</span>
-              <span class="tool">FastAPI</span>
-              <span class="tool">Apps Script</span>
-              <span class="tool">Claude Code</span>
-            </div>
-          </div>
+      <article class="launch">
+        <div class="launch-top">
+          <span class="launch-tag mono">Subscription &middot; $1-2/mo</span>
+          <span class="launch-status mono">
+            <span class="avail-dot avail-dot--white"></span>
+            Live in production
+          </span>
+        </div>
 
-          <div class="launch-metrics">
-            <div class="metric">
-              <span class="metric-num">35+</span>
-              <span class="metric-label mono">Properties</span>
-            </div>
-            <div class="metric">
-              <span class="metric-num">~50M</span>
-              <span class="metric-label mono">Sessions / mo</span>
-            </div>
-            <div class="metric">
-              <span class="metric-num">20K+</span>
-              <span class="metric-label mono">Subs / 3mo</span>
-            </div>
-            <div class="metric">
-              <span class="metric-num">10%+</span>
-              <span class="metric-label mono">Revenue uplift</span>
-            </div>
+        <h3 class="launch-title">
+          End-to-end membership system &mdash; Stripe checkout,
+          SSO login, ad-suppression, custom WordPress plugin.
+        </h3>
+
+        <p class="launch-body">
+          Designed and shipped the "Go Ad-Free" subscription end-to-end. Stripe-first
+          checkout with SSO / Google One Tap login, ad-suppression logic, and a custom
+          WordPress membership plugin. Instrumented GA4 conversion funnels and Stripe
+          webhook tracking across 4 publishing assets &mdash; lifting unit-economics
+          visibility and contributing to a 10%+ revenue uplift through pricing
+          experiments, CTA placement tests, and audience segmentation.
+        </p>
+
+        <div class="launch-metrics">
+          <div class="metric">
+            <span class="metric-num">35<span class="metric-sym">+</span></span>
+            <span class="metric-label mono">Properties</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">~50M</span>
+            <span class="metric-label mono">Sessions / mo</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">20K<span class="metric-sym">+</span></span>
+            <span class="metric-label mono">Subs / 3mo</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">10<span class="metric-sym">%+</span></span>
+            <span class="metric-label mono">Revenue uplift</span>
           </div>
         </div>
+
+        <div class="launch-tools">
+          <span class="tool">Stripe</span>
+          <span class="tool">Google One Tap</span>
+          <span class="tool">WordPress Plugin</span>
+          <span class="tool">GA4</span>
+          <span class="tool">FastAPI</span>
+          <span class="tool">Apps Script</span>
+          <span class="tool">Claude Code</span>
+        </div>
       </article>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section section--stack" id="stack">
+    <div class="container">
+      <header class="section-head section-head--centered">
+        <span class="section-eyebrow mono">03 — Stack</span>
+        <h2 class="section-title section-title--centered">
+          A practical kit for<br><em>0 &rarr; 1</em> monetization.
+        </h2>
+      </header>
+
+      <div class="stack-grid">
+        <div class="stack-col">
+          <span class="stack-col-head mono">Growth &amp; Monetization</span>
+          <ul class="stack-list">
+            <li>Subscription Systems</li>
+            <li>Funnel Optimization</li>
+            <li>Newsletter Growth</li>
+            <li>Payments Integration</li>
+            <li>Revenue Optimization</li>
+            <li>CRO &amp; A/B Testing</li>
+            <li>Pricing Strategy</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <span class="stack-col-head mono">Analytics &amp; Product</span>
+          <ul class="stack-list">
+            <li>GA4</li>
+            <li>Google Tag Manager</li>
+            <li>Stripe Dashboard</li>
+            <li>Event Instrumentation</li>
+            <li>User Behavior Analytics</li>
+            <li>Cohort Analysis</li>
+            <li>Dashboarding</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <span class="stack-col-head mono">Programming &amp; Data</span>
+          <ul class="stack-list">
+            <li>Python &middot; FastAPI</li>
+            <li>SQL &middot; PostgreSQL</li>
+            <li>Apps Script</li>
+            <li>NLP &middot; LLMs &middot; LangChain</li>
+            <li>Neo4j &middot; Elasticsearch</li>
+            <li>REST APIs &middot; JSON</li>
+            <li>HTML &middot; CSS</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <span class="stack-col-head mono">Platforms &amp; Tools</span>
+          <ul class="stack-list">
+            <li>WordPress</li>
+            <li>Stripe &middot; PayPal</li>
+            <li>Mediavine &middot; Raptive</li>
+            <li>Claude Code &middot; Git</li>
+            <li>Jira &middot; Notion</li>
+            <li>Excel &middot; Google Sheets</li>
+            <li>PowerPoint</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="section section--contact" id="contact">
     <div class="container contact-inner">
-      <span class="section-eyebrow mono">03 / Contact</span>
-      <h2 class="contact-title">Let's build something <em>across the void</em>.</h2>
-      <p class="contact-sub">
-        Currently in the Founder's Office at LH2 Holdings. Open to conversations on
-        growth, monetization, AI products, and 0&rarr;1 launches.
-      </p>
-      <div class="contact-actions">
-        <a href="mailto:mohnish238@gmail.com" class="btn btn--primary btn--lg">
-          <span>mohnish238@gmail.com</span>
-          <span class="btn-arrow">&rarr;</span>
-        </a>
-        <a href="https://www.linkedin.com/in/mohnish-nagar/" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
-        <a href="https://github.com/nagarmohnish" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+      <span class="section-eyebrow mono">04 — Contact</span>
+      <h2 class="contact-title">
+        Let's build something<br>worth shipping.
+      </h2>
+
+      <a href="mailto:mohnish238@gmail.com" class="contact-mail">
+        <span>mohnish238@gmail.com</span>
+        <span class="contact-mail-arrow">&rarr;</span>
+      </a>
+
+      <div class="contact-row">
+        <a href="https://www.linkedin.com/in/mohnish-nagar/" target="_blank" rel="noopener" class="contact-link mono">LinkedIn</a>
+        <a href="https://github.com/nagarmohnish" target="_blank" rel="noopener" class="contact-link mono">GitHub</a>
+        <a href="tel:+919555864171" class="contact-link mono">+91 95558 64171</a>
+        <a href="../Mohnish_Nagar_CV_2.pdf" download class="contact-link mono">CV.pdf</a>
       </div>
     </div>
   </section>
@@ -285,7 +321,8 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span class="mono">&copy; 2026 Mohnish Nagar</span>
-      <a href="../" class="mono footer-back">&larr; Main site</a>
+      <span class="mono footer-mid">Bangalore, India</span>
+      <a href="../" class="mono footer-back">Main site &rarr;</a>
     </div>
   </footer>
 
